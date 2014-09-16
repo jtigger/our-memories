@@ -13,3 +13,7 @@ gem 'coffee-rails', '~> 4.0.0'
  'bourbon' => '~> 3.2.3',  # best for Sass 3.2
  'neat' => '~> 1.5.1'
 }.each { |lib,version| gem "rails-assets-#{lib}", version }
+
+group :development do
+  gem 'bitters', '~> 0.10.0'    # scaffold styling
+end
