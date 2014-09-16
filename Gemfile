@@ -14,6 +14,10 @@ gem 'coffee-rails', '~> 4.0.0'
  'neat' => '~> 1.5.1'
 }.each { |lib,version| gem "rails-assets-#{lib}", version }
 
+group :test, :development do
+  gem 'rspec-rails', '~> 3.1.0'
+end
+
 group :development do
   gem 'bitters', '~> 0.10.0'    # scaffold styling
 end
