@@ -12,4 +12,6 @@ test:
   database: our-memories-test
 
 production:
-#  url: ENV['DATABASE_URL']
+  <<: *default
+  database: our-memories-production
+  url: <%= ENV['DATABASE_URL'] %>
