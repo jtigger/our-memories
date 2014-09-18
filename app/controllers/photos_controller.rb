@@ -1,5 +1,5 @@
 class PhotosController < ApplicationController
   def index
-    @thumbnails = Photo.thumbnails
+    @photos = Photo.thumbnails
   end
 end

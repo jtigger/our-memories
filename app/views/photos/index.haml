@@ -2,7 +2,6 @@
 .container
   .photo-grid
     %ul.list
-      %li.card
-        %img{ 'src' => 'http://dummyimage.com/250x250/fff/ffd900.png'}
-      %li.card
-        %img{ 'src' => 'http://dummyimage.com/250x250/fff/ffd900.png'}
+      - @photos.each do |photo|
+        %li.card
+          = image_tag photo.thumbnail_url
