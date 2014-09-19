@@ -7,6 +7,7 @@ gem 'haml-rails', '~> 0.5.3'
 gem 'sass-rails', '~> 4.0.3'  # provides Sass 3.2
 gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '~> 2.5.3'
+gem 'dotenv-rails', '~> 0.11.1'
 
 # Rails Assets
 {'jQuery' => '~> 2.1.1',
