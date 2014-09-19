@@ -2,15 +2,60 @@
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
+ * In this application, we're largely relying on SCSS' @import feature to include styles.  As a rule,
+ * custom CSS is included in this way (instead of relying on sprockets).
+ *
+ * 3rd party CSS is likely loaded through sprockets (i.e. through the require_* directives).
+ *
  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
  * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
  *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
  */
 
 @import "bourbon";
+@import "base/base";
 @import "neat";
+
+$black: #000;
+$white: #fff;
+
+.container {
+  @include outer-container();
+}
+
+.photo-grid {
+  @include media($mobile) {
+    @include span-columns(4);
+  }
+  @include media($tablet) {
+    @include span-columns(8);
+  }
+  @include media($desktop) {
+    @include span-columns(12);
+  }
+  background: $medium-gray;
+
+  .list {
+    .card {
+      @include pad(2px);
+      @include media($mobile) {
+        @include fill-parent();
+      }
+      @include media($tablet) {
+        @include span-columns(4);
+        @include omega(2n);
+      }
+      @include media($desktop) {
+        @include span-columns(3);
+        @include omega(4n);
+      }
+      img {
+        @include fill-parent();
+      }
+
+    }
+  }
+
+}
+
 

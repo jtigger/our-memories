@@ -1,5 +1,4 @@
 applications:
-# Development BLUE
 - name: dotio-test
   host: dotio-test
   command: bundle exec rake db:migrate db:seed && bundle exec rails s -p $PORT -e $RAILS_ENV

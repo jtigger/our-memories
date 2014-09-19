@@ -1,0 +1,7 @@
+!!!
+.container
+  .photo-grid
+    %ul.list
+      - @photos.each do |photo|
+        %li.card
+          = image_tag photo.thumbnail_url
