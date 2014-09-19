@@ -5,7 +5,7 @@ namespace :photos do
     image_filepaths = Dir.glob("#{root}/**/*.{jpg,JPG,png,PNG,gif,GIF}")
     image_filepaths.each do |filepath|
       filepath.sub!(root+'/','')
-      photo = Photo.find_or_create_by thumbnail_url: filepath
+      photo = Photo.find_or_create_by thumbnail_path: filepath
       photo.save!
     end
   end
