@@ -19,6 +19,7 @@ gem 'paperclip', '~> 4.2.0'
 
 group :test, :development do
   gem 'rspec-rails', '~> 3.1.0'
+  gem 'pry-byebug', '~> 2.0.0'
 end
 
 group :development do
