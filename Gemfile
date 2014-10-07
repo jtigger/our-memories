@@ -8,6 +8,7 @@ gem 'sass-rails', '~> 4.0.3'  # provides Sass 3.2
 gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '~> 2.5.3'
 gem 'dotenv-rails', '~> 0.11.1'
+gem 'paperclip', '~> 4.2.0'
 
 # Rails Assets
 {'jQuery' => '~> 2.1.1',
@@ -18,6 +19,7 @@ gem 'dotenv-rails', '~> 0.11.1'
 
 group :test, :development do
   gem 'rspec-rails', '~> 3.1.0'
+  gem 'pry-byebug', '~> 2.0.0'
 end
 
 group :development do

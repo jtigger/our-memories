@@ -1,5 +1,8 @@
 class Photo < ActiveRecord::Base
 
+  has_attached_file :image, styles: { thumbnail: '250x250' }
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+
   def self.thumbnails
     Photo.all
   end
@@ -9,4 +12,6 @@ class Photo < ActiveRecord::Base
     #"https://s3.amazonaws.com/dotio/images/#{thumbnail_path}"
     "#{thumbnail_path}"
   end
+
+
 end
